@@ -54,7 +54,7 @@ export default async function handler(req, res) {
     console.log('   Length:', length);
     
     // Call Gemini API
-    const geminiUrl = `https://generativelanguage.googleapis.com/v1beta/models/gemini-1.5-flash:generateContent?key=${API_KEY}`;
+   const geminiUrl = `https://generativelanguage.googleapis.com/v1beta/models/gemini-2.0-flash:generateContent?key=${API_KEY}`;
     
     const geminiResponse = await fetch(geminiUrl, {
       method: 'POST',
