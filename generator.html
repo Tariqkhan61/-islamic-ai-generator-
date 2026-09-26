@@ -1,0 +1,396 @@
+<!DOCTYPE html>
+<html lang="en" dir="ltr">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>AI Generator | Islamic AI</title>
+  
+  <!-- Google Fonts -->
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Noto+Nastaliq+Urdu:wght@400;600;700&family=Poppins:wght@400;500;600;700;800&family=Amiri:wght@400;700&display=swap" rel="stylesheet">
+  
+  <!-- Font Awesome Icons -->
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.0/css/all.min.css">
+  
+  <!-- CSS File -->
+  <link rel="stylesheet" href="css/style.css">
+</head>
+<body>
+
+  <!-- ============ HEADER ============ -->
+  <header class="header">
+    <div class="container header-inner">
+      
+      <a href="index.html" class="brand">
+        <img src="assets/images/logo.svg" alt="Logo" width="45" height="45">
+        <div class="brand-text">
+          <span class="brand-name">Islamic AI</span>
+          <span class="brand-tagline">by M Tariq Mahboob</span>
+        </div>
+      </a>
+      
+      <nav class="nav-menu">
+        <a href="index.html" class="nav-link">
+          <i class="fas fa-home"></i> Home
+        </a>
+        <a href="generator.html" class="nav-link active">
+          <i class="fas fa-magic"></i> Generator
+        </a>
+        <a href="categories.html" class="nav-link">
+          <i class="fas fa-th-large"></i> Categories
+        </a>
+        <a href="about.html" class="nav-link">
+          <i class="fas fa-info-circle"></i> About
+        </a>
+        <a href="contact.html" class="nav-link">
+          <i class="fas fa-envelope"></i> Contact
+        </a>
+      </nav>
+      
+      <div class="header-actions">
+        <div class="lang-switcher">
+          <button class="lang-btn active" data-lang="en">EN</button>
+          <button class="lang-btn" data-lang="ur">اردو</button>
+          <button class="lang-btn" data-lang="ar">ع</button>
+        </div>
+        <button class="theme-toggle" id="themeToggle" aria-label="Toggle theme">
+          <i class="fas fa-moon"></i>
+        </button>
+        <button class="mobile-menu-btn" id="mobileMenuBtn" aria-label="Menu">
+          <i class="fas fa-bars"></i>
+        </button>
+      </div>
+      
+    </div>
+  </header>
+
+  <!-- ============ GENERATOR PAGE ============ -->
+  <main class="generator-page" dir="rtl">
+    
+    <!-- Page Header -->
+    <section class="generator-header">
+      <div class="container">
+        <span class="section-badge">
+          <i class="fas fa-magic"></i>
+          AI جنریٹر
+        </span>
+        <h1 class="generator-title">
+          <span class="gradient-text">اسلامی مواد بنائیں</span>
+        </h1>
+        <p class="generator-desc">
+          موضوع منتخب کریں، قسم چنیں اور سیکنڈوں میں خوبصورت مواد حاصل کریں
+        </p>
+      </div>
+    </section>
+
+    <!-- Main Generator Area -->
+    <section class="generator-main">
+      <div class="container">
+        
+        <div class="generator-wrapper">
+          
+          <!-- ============ LEFT: INPUT PANEL ============ -->
+          <div class="input-panel">
+            
+            <div class="panel-header">
+              <h2>
+                <i class="fas fa-pen-fancy"></i>
+                مواد تیار کریں
+              </h2>
+              <p>نیچے دی گئی تفصیلات بھریں</p>
+            </div>
+            
+            <!-- Content Type Selector -->
+            <div class="form-group">
+              <label class="form-label">
+                <i class="fas fa-th-large"></i>
+                مواد کی قسم منتخب کریں
+              </label>
+              <div class="type-grid">
+                
+                <button class="type-btn active" data-type="quran">
+                  <i class="fas fa-book-open"></i>
+                  <span>قرآن</span>
+                </button>
+                
+                <button class="type-btn" data-type="hadith">
+                  <i class="fas fa-mosque"></i>
+                  <span>حدیث</span>
+                </button>
+                
+                <button class="type-btn" data-type="bayan">
+                  <i class="fas fa-pen-fancy"></i>
+                  <span>بیان</span>
+                </button>
+                
+                <button class="type-btn" data-type="post">
+                  <i class="fas fa-mobile-alt"></i>
+                  <span>پوسٹ</span>
+                </button>
+                
+                <button class="type-btn" data-type="quote">
+                  <i class="fas fa-quote-right"></i>
+                  <span>اقوال</span>
+                </button>
+                
+                <button class="type-btn" data-type="dua">
+                  <i class="fas fa-hands-praying"></i>
+                  <span>دعا</span>
+                </button>
+                
+              </div>
+            </div>
+            
+            <!-- Topic Input -->
+            <div class="form-group">
+              <label class="form-label" for="topicInput">
+                <i class="fas fa-lightbulb"></i>
+                موضوع / Topic
+              </label>
+              <textarea 
+                id="topicInput" 
+                class="form-input" 
+                rows="3"
+                placeholder="مثال: صبر کی اہمیت، والدین کے حقوق، رمضان کی فضیلت..."
+              ></textarea>
+              
+              <!-- Quick Suggestions -->
+              <div class="suggestions">
+                <span class="suggestion-label">تجاویز:</span>
+                <button class="suggestion-chip" data-topic="صبر کی اہمیت">صبر کی اہمیت</button>
+                <button class="suggestion-chip" data-topic="والدین کے حقوق">والدین کے حقوق</button>
+                <button class="suggestion-chip" data-topic="نماز کی فضیلت">نماز کی فضیلت</button>
+                <button class="suggestion-chip" data-topic="رمضان کی برکات">رمضان کی برکات</button>
+              </div>
+            </div>
+            
+            <!-- Language Selector -->
+            <div class="form-group">
+              <label class="form-label">
+                <i class="fas fa-globe"></i>
+                زبان / Language
+              </label>
+              <div class="lang-grid">
+                <button class="lang-option active" data-lang="ur">
+                  <span>اردو</span>
+                  <small>Urdu</small>
+                </button>
+                <button class="lang-option" data-lang="en">
+                  <span>English</span>
+                  <small>English</small>
+                </button>
+                <button class="lang-option" data-lang="ar">
+                  <span>العربية</span>
+                  <small>Arabic</small>
+                </button>
+              </div>
+            </div>
+            
+            <!-- Length Selector -->
+            <div class="form-group">
+              <label class="form-label">
+                <i class="fas fa-ruler"></i>
+                لمبائی / Length
+              </label>
+              <div class="length-grid">
+                <button class="length-option" data-length="short">
+                  <i class="fas fa-feather"></i>
+                  <span>مختصر</span>
+                </button>
+                <button class="length-option active" data-length="medium">
+                  <i class="fas fa-align-left"></i>
+                  <span>درمیانہ</span>
+                </button>
+                <button class="length-option" data-length="long">
+                  <i class="fas fa-book"></i>
+                  <span>تفصیلی</span>
+                </button>
+              </div>
+            </div>
+            
+            <!-- Generate Button -->
+            <button class="btn btn-primary generate-btn" id="generateBtn">
+              <i class="fas fa-magic"></i>
+              <span>✨ AI سے بنائیں</span>
+            </button>
+            
+          </div>
+          
+          <!-- ============ RIGHT: OUTPUT PANEL ============ -->
+          <div class="output-panel">
+            
+            <div class="panel-header">
+              <h2>
+                <i class="fas fa-file-alt"></i>
+                نتیجہ
+              </h2>
+              <p>آپ کا تیار کردہ مواد یہاں ظاہر ہوگا</p>
+            </div>
+            
+            <!-- Empty State -->
+            <div class="output-empty" id="outputEmpty">
+              <div class="empty-icon">
+                <i class="fas fa-scroll"></i>
+              </div>
+              <h3>ابھی کوئی مواد نہیں</h3>
+              <p>بائیں طرف تفصیلات بھر کر "AI سے بنائیں" پر کلک کریں</p>
+            </div>
+            
+            <!-- Loading State -->
+            <div class="output-loading" id="outputLoading" style="display: none;">
+              <div class="loader"></div>
+              <h3>AI سوچ رہا ہے...</h3>
+              <p>برائے مہربانی انتظار کریں</p>
+            </div>
+            
+            <!-- Result State -->
+            <div class="output-result" id="outputResult" style="display: none;">
+              
+              <div class="result-meta">
+                <span class="result-badge">
+                  <i class="fas fa-check-circle"></i>
+                  تیار
+                </span>
+                <span class="result-time" id="resultTime"></span>
+              </div>
+              
+              <div class="result-content" id="resultContent">
+                <!-- AI content will appear here -->
+              </div>
+              
+              <!-- Action Buttons -->
+              <div class="result-actions">
+                <button class="action-btn" id="copyBtn" title="کاپی کریں">
+                  <i class="fas fa-copy"></i>
+                  <span>کاپی</span>
+                </button>
+                <button class="action-btn" id="downloadBtn" title="ڈاؤن لوڈ کریں">
+                  <i class="fas fa-download"></i>
+                  <span>ڈاؤن لوڈ</span>
+                </button>
+                <button class="action-btn" id="shareBtn" title="شیئر کریں">
+                  <i class="fas fa-share-alt"></i>
+                  <span>شیئر</span>
+                </button>
+                <button class="action-btn" id="regenBtn" title="دوبارہ بنائیں">
+                  <i class="fas fa-redo"></i>
+                  <span>دوبارہ</span>
+                </button>
+              </div>
+              
+            </div>
+            
+            <!-- Error State -->
+            <div class="output-error" id="outputError" style="display: none;">
+              <div class="error-icon">
+                <i class="fas fa-exclamation-triangle"></i>
+              </div>
+              <h3>معذرت، کچھ غلط ہو گیا</h3>
+              <p id="errorMessage">دوبارہ کوشش کریں</p>
+              <button class="btn btn-outline" onclick="location.reload()">
+                <i class="fas fa-redo"></i>
+                دوبارہ کوشش کریں
+              </button>
+            </div>
+            
+          </div>
+          
+        </div>
+        
+      </div>
+    </section>
+    
+  </main>
+
+  <!-- ============ FOOTER ============ -->
+  <footer class="footer">
+    <div class="container">
+      
+      <div class="footer-grid">
+        
+        <div class="footer-col">
+          <div class="footer-brand">
+            <img src="assets/images/logo.svg" alt="Logo" width="50" height="50">
+            <h3>Islamic AI</h3>
+          </div>
+          <p class="footer-desc">
+            Generate beautiful Islamic content in seconds — Quran, Hadith, 
+            Bayan, Duas, and much more. Powered by AI.
+          </p>
+          <div class="footer-social">
+            <a href="#" aria-label="Facebook"><i class="fab fa-facebook-f"></i></a>
+            <a href="#" aria-label="Twitter"><i class="fab fa-twitter"></i></a>
+            <a href="#" aria-label="Instagram"><i class="fab fa-instagram"></i></a>
+            <a href="#" aria-label="YouTube"><i class="fab fa-youtube"></i></a>
+            <a href="#" aria-label="WhatsApp"><i class="fab fa-whatsapp"></i></a>
+          </div>
+        </div>
+        
+        <div class="footer-col">
+          <h4>Quick Links</h4>
+          <ul class="footer-links">
+            <li><a href="index.html"><i class="fas fa-chevron-right"></i> Home</a></li>
+            <li><a href="generator.html"><i class="fas fa-chevron-right"></i> Generator</a></li>
+            <li><a href="categories.html"><i class="fas fa-chevron-right"></i> Categories</a></li>
+            <li><a href="about.html"><i class="fas fa-chevron-right"></i> About Us</a></li>
+            <li><a href="contact.html"><i class="fas fa-chevron-right"></i> Contact</a></li>
+          </ul>
+        </div>
+        
+        <div class="footer-col">
+          <h4>Categories</h4>
+          <ul class="footer-links">
+            <li><a href="#"><i class="fas fa-chevron-right"></i> Quran Verses</a></li>
+            <li><a href="#"><i class="fas fa-chevron-right"></i> Hadith</a></li>
+            <li><a href="#"><i class="fas fa-chevron-right"></i> Bayan / Khutbah</a></li>
+            <li><a href="#"><i class="fas fa-chevron-right"></i> Duas & Zikr</a></li>
+            <li><a href="#"><i class="fas fa-chevron-right"></i> Social Media Posts</a></li>
+          </ul>
+        </div>
+        
+        <div class="footer-col">
+          <h4>Get in Touch</h4>
+          <ul class="footer-contact">
+            <li>
+              <i class="fas fa-envelope"></i>
+              <span>contact@islamicai.com</span>
+            </li>
+            <li>
+              <i class="fas fa-globe"></i>
+              <span>www.islamicai.com</span>
+            </li>
+            <li>
+              <i class="fas fa-map-marker-alt"></i>
+              <span>Pakistan</span>
+            </li>
+          </ul>
+        </div>
+        
+      </div>
+      
+      <div class="footer-bottom">
+        <p class="copyright">
+          © 2025 <strong>Islamic AI</strong>. All rights reserved.
+        </p>
+        <p class="designer-credit">
+          <i class="fas fa-crown"></i>
+          Designed &amp; Developed by 
+          <span class="designer-name">M Tariq Mahboob</span>
+          <i class="fas fa-star"></i>
+        </p>
+        <div class="footer-legal">
+          <a href="privacy.html">Privacy Policy</a>
+          <span>•</span>
+          <a href="terms.html">Terms of Service</a>
+        </div>
+      </div>
+      
+    </div>
+  </footer>
+
+  <!-- JavaScript -->
+  <script src="js/main.js"></script>
+
+</body>
+</html>

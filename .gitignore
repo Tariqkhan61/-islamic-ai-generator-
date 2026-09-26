@@ -1,0 +1,23 @@
+# Environment Variables
+.env
+.env.local
+.env*.local
+
+# Dependencies
+node_modules/
+package-lock.json
+
+# System files
+.DS_Store
+Thumbs.db
+
+# Vercel
+.vercel
+
+# Logs
+*.log
+npm-debug.log*
+
+# Editor
+.vscode/
+.idea/b

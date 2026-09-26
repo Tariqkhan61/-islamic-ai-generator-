@@ -1,0 +1,23 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 100 100" width="120" height="120">
+  <defs>
+    <linearGradient id="goldGrad" x1="0%" y1="0%" x2="100%" y2="100%">
+      <stop offset="0%" style="stop-color:#D4AF37"/>
+      <stop offset="100%" style="stop-color:#F5D97A"/>
+    </linearGradient>
+    <linearGradient id="greenGrad" x1="0%" y1="0%" x2="100%" y2="100%">
+      <stop offset="0%" style="stop-color:#0B6E4F"/>
+      <stop offset="100%" style="stop-color:#10B981"/>
+    </linearGradient>
+  </defs>
+  
+  <!-- Green Circle Background -->
+  <circle cx="50" cy="50" r="48" fill="url(#greenGrad)"/>
+  
+  <!-- Gold Crescent Moon -->
+  <path d="M 65 25 A 30 30 0 1 0 65 75 A 22 22 0 1 1 65 25 Z" 
+        fill="url(#goldGrad)"/>
+  
+  <!-- Gold Star -->
+  <polygon points="72,35 75,43 83,43 77,48 79,56 72,51 65,56 67,48 61,43 69,43" 
+           fill="url(#goldGrad)"/>
+</svg>
