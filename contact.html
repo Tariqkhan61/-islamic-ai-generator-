@@ -1,0 +1,374 @@
+<!DOCTYPE html>
+<html lang="en" dir="ltr">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Contact | Islamic AI</title>
+  
+  <!-- Google Fonts -->
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Noto+Nastaliq+Urdu:wght@400;600;700&family=Poppins:wght@400;500;600;700;800&family=Amiri:wght@400;700&display=swap" rel="stylesheet">
+  
+  <!-- Font Awesome Icons -->
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.0/css/all.min.css">
+  
+  <!-- CSS File -->
+  <link rel="stylesheet" href="css/style.css">
+</head>
+<body>
+
+  <!-- ============ HEADER ============ -->
+  <header class="header">
+    <div class="container header-inner">
+      
+      <a href="index.html" class="brand">
+        <img src="assets/images/logo.svg" alt="Logo" width="45" height="45">
+        <div class="brand-text">
+          <span class="brand-name">Islamic AI</span>
+          <span class="brand-tagline">by M Tariq Mahboob</span>
+        </div>
+      </a>
+      
+      <nav class="nav-menu">
+        <a href="index.html" class="nav-link">
+          <i class="fas fa-home"></i> Home
+        </a>
+        <a href="generator.html" class="nav-link">
+          <i class="fas fa-magic"></i> Generator
+        </a>
+        <a href="categories.html" class="nav-link">
+          <i class="fas fa-th-large"></i> Categories
+        </a>
+        <a href="about.html" class="nav-link">
+          <i class="fas fa-info-circle"></i> About
+        </a>
+        <a href="contact.html" class="nav-link active">
+          <i class="fas fa-envelope"></i> Contact
+        </a>
+      </nav>
+      
+      <div class="header-actions">
+        <div class="lang-switcher">
+          <button class="lang-btn active" data-lang="en">EN</button>
+          <button class="lang-btn" data-lang="ur">اردو</button>
+          <button class="lang-btn" data-lang="ar">ع</button>
+        </div>
+        <button class="theme-toggle" id="themeToggle" aria-label="Toggle theme">
+          <i class="fas fa-moon"></i>
+        </button>
+        <button class="mobile-menu-btn" id="mobileMenuBtn" aria-label="Menu">
+          <i class="fas fa-bars"></i>
+        </button>
+      </div>
+      
+    </div>
+  </header>
+
+  <!-- ============ CONTACT PAGE ============ -->
+  <main class="contact-page" dir="rtl">
+    
+    <!-- Page Header -->
+    <section class="page-header">
+      <div class="container">
+        <span class="section-badge">
+          <i class="fas fa-envelope"></i>
+          رابطہ کریں
+        </span>
+        <h1 class="page-title">
+          <span class="gradient-text">ہم سے رابطہ کریں</span>
+        </h1>
+        <p class="page-desc">
+          کوئی سوال، مشورہ، یا شکایت؟ ہمیں بتائیں — ہم جلد از جلد جواب دیں گے
+        </p>
+        <div class="divider">
+          <i class="fas fa-mosque"></i>
+        </div>
+      </div>
+    </section>
+
+    <!-- Contact Info Cards -->
+    <section class="contact-info-section">
+      <div class="container">
+        
+        <div class="contact-info-grid">
+          
+          <div class="info-card" style="--card-color-1: #0B6E4F; --card-color-2: #10B981;">
+            <div class="info-icon">
+              <i class="fas fa-envelope"></i>
+            </div>
+            <h3>ای میل</h3>
+            <p>contact@islamicai.com</p>
+          </div>
+          
+          <div class="info-card" style="--card-color-1: #D4AF37; --card-color-2: #F59E0B;">
+            <div class="info-icon">
+              <i class="fas fa-globe"></i>
+            </div>
+            <h3>ویب سائٹ</h3>
+            <p>www.islamicai.com</p>
+          </div>
+          
+          <div class="info-card" style="--card-color-1: #8B5CF6; --card-color-2: #EC4899;">
+            <div class="info-icon">
+              <i class="fas fa-map-marker-alt"></i>
+            </div>
+            <h3>مقام</h3>
+            <p>پاکستان</p>
+          </div>
+          
+        </div>
+        
+      </div>
+    </section>
+
+    <!-- Contact Form Section -->
+    <section class="contact-form-section">
+      <div class="container">
+        
+        <div class="contact-wrapper">
+          
+          <!-- Form -->
+          <div class="contact-form-box">
+            <h2>
+              <i class="fas fa-paper-plane"></i>
+              پیغام بھیجیں
+            </h2>
+            <p class="form-subtitle">نیچے دیا گیا فارم بھریں</p>
+            
+            <form id="contactForm" class="contact-form">
+              
+              <div class="form-group">
+                <label for="name">
+                  <i class="fas fa-user"></i>
+                  آپ کا نام
+                </label>
+                <input type="text" id="name" name="name" placeholder="مکمل نام لکھیں" required>
+              </div>
+              
+              <div class="form-group">
+                <label for="email">
+                  <i class="fas fa-envelope"></i>
+                  ای میل
+                </label>
+                <input type="email" id="email" name="email" placeholder="example@email.com" required>
+              </div>
+              
+              <div class="form-group">
+                <label for="subject">
+                  <i class="fas fa-tag"></i>
+                  موضوع
+                </label>
+                <input type="text" id="subject" name="subject" placeholder="پیغام کا موضوع" required>
+              </div>
+              
+              <div class="form-group">
+                <label for="message">
+                  <i class="fas fa-comment"></i>
+                  پیغام
+                </label>
+                <textarea id="message" name="message" rows="5" placeholder="اپنا پیغام یہاں لکھیں..." required></textarea>
+              </div>
+              
+              <button type="submit" class="btn btn-primary submit-btn">
+                <i class="fas fa-paper-plane"></i>
+                <span>پیغام بھیجیں</span>
+              </button>
+              
+            </form>
+          </div>
+          
+          <!-- Side Info -->
+          <div class="contact-side">
+            
+            <div class="side-box">
+              <div class="side-icon">
+                <i class="fas fa-clock"></i>
+              </div>
+              <h3>جواب کا وقت</h3>
+              <p>عام طور پر 24 گھنٹوں کے اندر جواب دیا جاتا ہے</p>
+            </div>
+            
+            <div class="side-box">
+              <div class="side-icon">
+                <i class="fas fa-shield-alt"></i>
+              </div>
+              <h3>آپ کی پرائیویسی</h3>
+              <p>آپ کی معلومات محفوظ رہتی ہیں — کسی کے ساتھ شیئر نہیں کی جاتیں</p>
+            </div>
+            
+            <div class="side-box">
+              <div class="side-icon">
+                <i class="fas fa-heart"></i>
+              </div>
+              <h3>خدمت کا جذبہ</h3>
+              <p>ہم امت کی خدمت کے لیے ہمیشہ حاضر ہیں</p>
+            </div>
+            
+          </div>
+          
+        </div>
+        
+      </div>
+    </section>
+
+    <!-- FAQ Section -->
+    <section class="faq-section">
+      <div class="container">
+        
+        <div class="section-header">
+          <h2 class="section-title">
+            <span class="gradient-text">عام سوالات</span>
+          </h2>
+          <p class="section-desc">اکثر پوچھے جانے والے سوالات</p>
+          <div class="divider">
+            <i class="fas fa-question-circle"></i>
+          </div>
+        </div>
+        
+        <div class="faq-grid">
+          
+          <div class="faq-item">
+            <h4>
+              <i class="fas fa-question"></i>
+              کیا یہ سروس مفت ہے؟
+            </h4>
+            <p>جی ہاں، یہ مکمل طور پر مفت ہے — تمام مسلمانوں کے لیے۔</p>
+          </div>
+          
+          <div class="faq-item">
+            <h4>
+              <i class="fas fa-question"></i>
+              کیا مواد مستند ہے؟
+            </h4>
+            <p>جی ہاں، AI مستند اسلامی مصادر سے مدد لیتا ہے۔ تاہم، اہم معاملات میں علماء سے رجوع کریں۔</p>
+          </div>
+          
+          <div class="faq-item">
+            <h4>
+              <i class="fas fa-question"></i>
+              کیا میں اسے اپنی ویب سائٹ پر استعمال کر سکتا ہوں؟
+            </h4>
+            <p>جی ہاں، آپ اس کا مواد اپنے اسلامی کاموں کے لیے استعمال کر سکتے ہیں۔</p>
+          </div>
+          
+          <div class="faq-item">
+            <h4>
+              <i class="fas fa-question"></i>
+              کوئی تجویز یا شکایت کیسے بھیجیں؟
+            </h4>
+            <p>اوپر دیا گیا فارم بھریں — ہم جلد از جلد جواب دیں گے۔</p>
+          </div>
+          
+        </div>
+        
+      </div>
+    </section>
+
+    <!-- CTA Section -->
+    <section class="cta-section">
+      <div class="container">
+        <div class="cta-box">
+          <h2>ابھی آزمائیں</h2>
+          <p>سیکنڈوں میں اسلامی مواد تیار کریں</p>
+          <a href="generator.html" class="btn btn-gold">
+            <i class="fas fa-magic"></i>
+            <span>✨ AI جنریٹر کھولیں</span>
+          </a>
+        </div>
+      </div>
+    </section>
+    
+  </main>
+
+  <!-- ============ FOOTER ============ -->
+  <footer class="footer">
+    <div class="container">
+      
+      <div class="footer-grid">
+        
+        <div class="footer-col">
+          <div class="footer-brand">
+            <img src="assets/images/logo.svg" alt="Logo" width="50" height="50">
+            <h3>Islamic AI</h3>
+          </div>
+          <p class="footer-desc">
+            Generate beautiful Islamic content in seconds — Quran, Hadith, 
+            Bayan, Duas, and much more. Powered by AI.
+          </p>
+          <div class="footer-social">
+            <a href="#" aria-label="Facebook"><i class="fab fa-facebook-f"></i></a>
+            <a href="#" aria-label="Twitter"><i class="fab fa-twitter"></i></a>
+            <a href="#" aria-label="Instagram"><i class="fab fa-instagram"></i></a>
+            <a href="#" aria-label="YouTube"><i class="fab fa-youtube"></i></a>
+            <a href="#" aria-label="WhatsApp"><i class="fab fa-whatsapp"></i></a>
+          </div>
+        </div>
+        
+        <div class="footer-col">
+          <h4>Quick Links</h4>
+          <ul class="footer-links">
+            <li><a href="index.html"><i class="fas fa-chevron-right"></i> Home</a></li>
+            <li><a href="generator.html"><i class="fas fa-chevron-right"></i> Generator</a></li>
+            <li><a href="categories.html"><i class="fas fa-chevron-right"></i> Categories</a></li>
+            <li><a href="about.html"><i class="fas fa-chevron-right"></i> About Us</a></li>
+            <li><a href="contact.html"><i class="fas fa-chevron-right"></i> Contact</a></li>
+          </ul>
+        </div>
+        
+        <div class="footer-col">
+          <h4>Categories</h4>
+          <ul class="footer-links">
+            <li><a href="generator.html?type=quran"><i class="fas fa-chevron-right"></i> Quran Verses</a></li>
+            <li><a href="generator.html?type=hadith"><i class="fas fa-chevron-right"></i> Hadith</a></li>
+            <li><a href="generator.html?type=bayan"><i class="fas fa-chevron-right"></i> Bayan / Khutbah</a></li>
+            <li><a href="generator.html?type=dua"><i class="fas fa-chevron-right"></i> Duas & Zikr</a></li>
+            <li><a href="generator.html?type=post"><i class="fas fa-chevron-right"></i> Social Media Posts</a></li>
+          </ul>
+        </div>
+        
+        <div class="footer-col">
+          <h4>Get in Touch</h4>
+          <ul class="footer-contact">
+            <li>
+              <i class="fas fa-envelope"></i>
+              <span>contact@islamicai.com</span>
+            </li>
+            <li>
+              <i class="fas fa-globe"></i>
+              <span>www.islamicai.com</span>
+            </li>
+            <li>
+              <i class="fas fa-map-marker-alt"></i>
+              <span>Pakistan</span>
+            </li>
+          </ul>
+        </div>
+        
+      </div>
+      
+      <div class="footer-bottom">
+        <p class="copyright">
+          © 2026 <strong>Islamic AI</strong>. All rights reserved.
+        </p>
+        <p class="designer-credit">
+          <i class="fas fa-crown"></i>
+          Designed &amp; Developed by 
+          <span class="designer-name">M Tariq Mahboob</span>
+          <i class="fas fa-star"></i>
+        </p>
+        <div class="footer-legal">
+          <a href="privacy.html">Privacy Policy</a>
+          <span>•</span>
+          <a href="terms.html">Terms of Service</a>
+        </div>
+      </div>
+      
+    </div>
+  </footer>
+
+  <!-- JavaScript -->
+  <script src="js/main.js"></script>
+
+</body>
+</html>
