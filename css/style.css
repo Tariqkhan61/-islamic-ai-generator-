@@ -2791,3 +2791,105 @@ section {
     padding: 1.7rem 1.2rem;
   }
 }
+/* ============================================
+   MOBILE MENU — RESPONSIVE FIX
+   ============================================ */
+
+@media (max-width: 968px) {
+  
+  /* Mobile menu button dikhayein */
+  .mobile-menu-btn {
+    display: flex !important;
+    align-items: center;
+    justify-content: center;
+  }
+  
+  /* Navigation menu default chhupayein */
+  .nav-menu {
+    display: none;
+    position: absolute;
+    top: 100%;
+    left: 0;
+    right: 0;
+    flex-direction: column;
+    background: white;
+    padding: 1rem;
+    box-shadow: 0 10px 30px rgba(0, 0, 0, 0.15);
+    border-radius: 0 0 24px 24px;
+    gap: 0.3rem;
+    z-index: 999;
+    border-top: 2px solid rgba(212, 175, 55, 0.2);
+  }
+  
+  /* Jab menu open ho */
+  .nav-menu.open {
+    display: flex !important;
+    animation: slideDown 0.3s ease;
+  }
+  
+  @keyframes slideDown {
+    from {
+      opacity: 0;
+      transform: translateY(-10px);
+    }
+    to {
+      opacity: 1;
+      transform: translateY(0);
+    }
+  }
+  
+  .nav-link {
+    width: 100%;
+    justify-content: flex-start;
+    padding: 0.9rem 1rem;
+    border-radius: 12px;
+    font-size: 1rem;
+  }
+  
+  .nav-link i {
+    font-size: 1rem;
+    width: 20px;
+  }
+  
+  .header-actions {
+    gap: 0.5rem;
+  }
+  
+  .brand-name {
+    font-size: 1rem;
+  }
+  
+  .brand-tagline {
+    font-size: 0.65rem;
+  }
+}
+
+@media (max-width: 600px) {
+  
+  .lang-switcher {
+    display: none;
+  }
+  
+  .brand-text {
+    display: none;
+  }
+  
+  .header-inner {
+    justify-content: space-between;
+  }
+  
+  .nav-menu {
+    padding: 0.8rem;
+  }
+  
+  .nav-link {
+    padding: 0.8rem 0.9rem;
+    font-size: 0.95rem;
+  }
+  
+  .mobile-menu-btn {
+    width: 40px;
+    height: 40px;
+    font-size: 1rem;
+  }
+}

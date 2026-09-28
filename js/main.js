@@ -296,3 +296,57 @@ ${title}
   
   console.log('✨ Generator Page — Interactive features loaded!');
 }
+/* ============================================
+   MOBILE MENU TOGGLE
+   ============================================ */
+
+document.addEventListener('DOMContentLoaded', function() {
+  
+  const mobileMenuBtn = document.getElementById('mobileMenuBtn');
+  const navMenu = document.querySelector('.nav-menu');
+  
+  console.log('🔍 Mobile Menu Check:');
+  console.log('   Button:', mobileMenuBtn);
+  console.log('   Menu:', navMenu);
+  
+  if (mobileMenuBtn && navMenu) {
+    
+    mobileMenuBtn.addEventListener('click', function(e) {
+      e.preventDefault();
+      e.stopPropagation();
+      
+      navMenu.classList.toggle('open');
+      
+      const icon = mobileMenuBtn.querySelector('i');
+      if (icon) {
+        if (navMenu.classList.contains('open')) {
+          icon.classList.remove('fa-bars');
+          icon.classList.add('fa-times');
+        } else {
+          icon.classList.remove('fa-times');
+          icon.classList.add('fa-bars');
+        }
+      }
+      
+      console.log('✅ Menu toggled:', navMenu.classList.contains('open'));
+    });
+    
+    // Bahar click karne pe menu band
+    document.addEventListener('click', function(e) {
+      if (!navMenu.contains(e.target) && !mobileMenuBtn.contains(e.target)) {
+        navMenu.classList.remove('open');
+        const icon = mobileMenuBtn.querySelector('i');
+        if (icon) {
+          icon.classList.remove('fa-times');
+          icon.classList.add('fa-bars');
+        }
+      }
+    });
+    
+    console.log('✅ Mobile menu initialized!');
+    
+  } else {
+    console.warn('⚠️ Mobile menu elements not found!');
+  }
+  
+});
